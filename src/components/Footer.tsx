@@ -1,18 +1,34 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const footerLinks = {
+interface LinkItem {
+  text: string;
+  url?: string;
+}
+
+type FooterLink = string | LinkItem;
+
+interface FooterSection {
+  title: string;
+  links: FooterLink[];
+}
+
+const footerLinks: Record<string, FooterSection> = {
   company: {
-    title: "COMPANY",
+    title: "COMMUNITY",
     links: ["About us", "Services", "Team", "Contact"],
   },
   resources: {
     title: "RESOURCES",
-    links: ["Events", "Blog", "Newsletter", "Downloads"],
+    links: ["Events", "Blog", "Newsletter"],
   },
   connect: {
-    title: "CONNECT",
-    links: ["Facebook", "Instagram", "Discord", "Support"],
+    title: "CONNECT WITH US!",
+    links: [
+      { text: "Instagram", url: "https://www.instagram.com/gombongitsociety/" },
+      { text: "Discord", url: "https://discord.gg/SyrDgPAM" },
+      { text: "WhatsApp Group", url: "https://chat.whatsapp.com/Cs15furLUihKO69S3ShJSA" },
+    ],
   },
   policies: {
     title: "POLICIES",
@@ -23,6 +39,25 @@ const footerLinks = {
 const Footer = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+
+  const renderLink = (link: FooterLink) => {
+    const isExternal = typeof link !== "string";
+    const text = isExternal ? link.text : link;
+    const url = isExternal ? link.url : "#";
+
+    return (
+      <li key={text}>
+        <a
+          href={url}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+          className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+        >
+          {text}
+        </a>
+      </li>
+    );
+  };
 
   return (
     <footer ref={ref} className="bg-muted/50 border-t border-border">
@@ -45,16 +80,7 @@ const Footer = () => {
                 {section.title}
               </h4>
               <ul className="space-y-3">
-                {section.links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-muted-foreground hover:text-foreground transition-colors text-sm"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                {section.links.map(renderLink)}
               </ul>
             </motion.div>
           ))}
@@ -68,9 +94,11 @@ const Footer = () => {
           >
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">G</span>
+                <span className="text-primary-foreground font-bold">
+                  <img src="logo.png" alt="gits" />
+                </span>
               </div>
-              <span className="font-bold text-xl text-foreground">GITS</span>
+              <span className="font-bold text-xl text-foreground"></span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               We are a group of individuals from all over the region who share a passion about improving our IT skills and building amazing projects together.
@@ -86,7 +114,7 @@ const Footer = () => {
           className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-sm text-muted-foreground">
-            ©2024 · GITSociety. All rights reserved.
+            ©2026 · Gombong IT Society. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a
