@@ -9,24 +9,24 @@ import {
 
 const faqs = [
   {
-    question: "How can I join this community?",
-    answer: "To join our community, simply click the 'Register' button on this page. Registration is open every Sunday at 09:00 WIB so don't miss your chance.",
+    question: "Bagaimana cara bergabung ke dalam komunitas GITS ?",
+    answer: "Untuk join ke komunitas GITS, kamu bisa mengunjungi link Discord atau WhatsApp Group yang tersedia di bagian Connect With Us pada footer website kami. Setelah bergabung, kamu bisa memperkenalkan diri dan mulai berinteraksi dengan anggota komunitas lainnya!",
   },
   {
-    question: "Are there any requirements to join the community?",
-    answer: "There are no strict requirements to join GITS. We welcome anyone who has a passion for learning IT, regardless of their current skill level. Whether you're a complete beginner or an experienced developer, you're welcome here!",
+    question: "Apa saja persyaratan untuk bergabung dengan GITS ?",
+    answer: "Tidak ada persyaratan khusus untuk bergabung dengan GITS. Kami terbuka untuk siapa saja yang memiliki minat dalam dunia IT, baik pemula maupun yang sudah berpengalaman. Yang terpenting adalah semangat untuk belajar dan berbagi pengetahuan dengan sesama anggota komunitas.",
   },
   {
-    question: "How often do you offer sessions or classes?",
-    answer: "We offer daily sessions including sharing sessions, coding practice, and discussion groups. Our main events are held every weekend, while smaller study groups meet throughout the week.",
+    question: "Apa tujuan GITS dibentuk ?",
+    answer: "Tujuan utama GITS adalah untuk menciptakan wadah bagi para pelajar dan profesional IT untuk saling berbagi ilmu, pengalaman, dan sumber daya. Kami ingin membangun komunitas yang suportif dimana anggotanya dapat tumbuh bersama dalam bidang teknologi informasi.",
   },
   {
-    question: "What types of activities or resources are offered in the community?",
-    answer: "We offer a variety of activities including coding workshops, project collaborations, sharing sessions, IT games, study groups, and mentorship programs. We also provide access to learning materials, tutorials, and a supportive community forum.",
+    question: "Apa saja kegiatan yang dilakukan oleh GITS ?",
+    answer: "Kegiatan GITS meliputi berbagai sesi pembelajaran dan sharing session. Kami juga sering mengadakan diskusi tentang tren terbaru di dunia IT serta berbagi tips dan trik seputar pengembangan perangkat lunak, keamanan siber, dan topik terkait lainnya. Selain itu, kami juga mengadakan event komunitas seperti meet and greet untuk mempererat hubungan antar anggota. Kami juga membangun relasi dengan profesional di industri IT untuk memberikan wawasan dan peluang bagi anggota kami.",
   },
   {
-    question: "Is there a cost to join the community or participate in sessions?",
-    answer: "Joining GITS is completely free! We believe that everyone should have access to quality IT education regardless of their financial situation. Some special workshops or events may have minimal fees to cover operational costs.",
+    question: "Adakah biaya untuk bergabung dengan GITS ?",
+    answer: "Untuk bergabung dengan GITS, tidak ada biaya yang dikenakan. Komunitas ini bersifat gratis dan terbuka untuk semua orang yang ingin belajar dan berbagi pengetahuan di bidang IT.",
   },
 ];
 
@@ -46,10 +46,10 @@ const FAQ = () => {
           className="text-center max-w-3xl mx-auto mb-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Frequently asked questions
+            Frequently Asked Questions
           </h2>
           <p className="text-lg text-muted-foreground">
-            You will find answers to the questions we get asked the most.
+            Temukan jawaban untuk pertanyaan-pertanyaan yang sering diajukan.
           </p>
         </motion.div>
 
