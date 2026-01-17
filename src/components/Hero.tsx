@@ -58,7 +58,9 @@ const Hero = () => {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button variant="hero" size="lg">
-                Register now
+                <a href="https://forms.gle/6bL8AmJW2Mj7LBdz5" target="_blank" rel="noopener noreferrer">
+                  Register now
+                </a>
               </Button>
               <Button variant="heroOutline" size="lg">
                 Learn more

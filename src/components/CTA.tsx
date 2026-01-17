@@ -56,7 +56,9 @@ const CTA = () => {
                 size="lg"
                 className="bg-white text-success hover:bg-white/90 font-semibold px-8"
               >
-                Register now
+                <a href="https://forms.gle/6bL8AmJW2Mj7LBdz5" target="_blank" rel="noopener noreferrer">
+                  Register now
+                </a>
               </Button>
             </motion.div>
           </div>
