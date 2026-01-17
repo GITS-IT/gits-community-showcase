@@ -13,19 +13,19 @@ const testimonials = [
     quote: "I've been learning coding with this community for the past few months and I'm amazed at how much I have improved. The daily sessions and other activities really helped me.",
     name: "Ilham Budi Trisetyo",
     role: "UI/UX Designer",
-    avatar: "/public/testimonials-avatar/ilham.jpg",
+    avatar: "testimonials-avatar/ilham.jpg",
   },
   {
     quote: "The community has been fantastic in providing a supportive and engaging learning environment. I am making great progress and I am confident that I will continue to improve.",
     name: "Alvin Adetya",
     role: "Full Stack Developer",
-    avatar: "/public/testimonials-avatar/alvin.jpg ",
+    avatar: "testimonials-avatar/alvin.jpg ",
   },
     {
     quote: "The community has been fantastic in providing a supportive and engaging learning environment. I am making great progress and I am confident that I will continue to improve.",
     name: "Fahmi Nabil Maulana",
     role: "Full Stack Developer",
-    avatar: "/public/testimonials-avatar/fahmi.jpg",
+    avatar: "testimonials-avatar/fahmi.jpg",
   },
 ];
 
