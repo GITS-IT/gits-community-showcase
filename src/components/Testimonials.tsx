@@ -11,15 +11,21 @@ const testimonials = [
   },
   {
     quote: "I've been learning coding with this community for the past few months and I'm amazed at how much I have improved. The daily sessions and other activities really helped me.",
-    name: "Dewi Sartika",
+    name: "Ilham Budi Trisetyo",
     role: "UI/UX Designer",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+    avatar: "/public/testimonials-avatar/ilham.jpg",
   },
   {
     quote: "The community has been fantastic in providing a supportive and engaging learning environment. I am making great progress and I am confident that I will continue to improve.",
-    name: "Budi Santoso",
-    role: "Full Stack Dev",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+    name: "Alvin Adetya",
+    role: "Full Stack Developer",
+    avatar: "/public/testimonials-avatar/alvin.jpg ",
+  },
+    {
+    quote: "The community has been fantastic in providing a supportive and engaging learning environment. I am making great progress and I am confident that I will continue to improve.",
+    name: "Fahmi Nabil Maulana",
+    role: "Full Stack Developer",
+    avatar: "/public/testimonials-avatar/fahmi.jpg",
   },
 ];
 
