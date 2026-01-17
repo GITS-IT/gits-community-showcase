@@ -51,15 +51,15 @@ const CTA = () => {
               <p className="text-success-foreground/80 mb-8 max-w-lg">
                 Don't miss out on exclusive content, events, and opportunities for personal growth.
               </p>
+              <a href="https://forms.gle/6bL8AmJW2Mj7LBdz5" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="secondary"
                 size="lg"
                 className="bg-white text-success hover:bg-white/90 font-semibold px-8"
               >
-                <a href="https://forms.gle/6bL8AmJW2Mj7LBdz5" target="_blank" rel="noopener noreferrer">
                   Register now
-                </a>
               </Button>
+                </a>
             </motion.div>
           </div>
         </motion.div>
