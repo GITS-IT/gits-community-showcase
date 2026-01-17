@@ -47,11 +47,11 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="lg">
               <a href="https://forms.gle/6bL8AmJW2Mj7LBdz5" target="_blank" rel="noopener noreferrer">
+            <Button variant="hero" size="lg">
                 Register now
-              </a>
             </Button>
+              </a>
           </div>
 
           {/* Mobile Menu Button */}
