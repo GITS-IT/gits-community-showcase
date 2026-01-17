@@ -26,7 +26,7 @@ const Header = () => {
           <a href="#" className="flex items-center gap-2">
             <div className="w-8 h-8 md:w-10 md:h-10 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm md:text-base">
-                <img src="/public/logo.png" alt="gits" />
+                <img src="logo.png" alt="gits" />
               </span>
             </div>
             <span className="font-bold text-lg md:text-xl text-foreground"></span>
