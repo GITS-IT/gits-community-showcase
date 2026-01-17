@@ -7,25 +7,25 @@ const testimonials = [
     quote: "Bersama GITS, saya merasa lebih percaya diri dalam menghadapi tantangan di bidang keamanan jaringan.",
     name: "Helga Alan Abhipraya",
     role: "Network Security Engineer",
-    avatar: "/public/testimonials-avatar/alan.jpg",
+    avatar: "testimonials-avatar/alan.jpg",
   },
   {
     quote: "I've been learning coding with this community for the past few months and I'm amazed at how much I have improved. The daily sessions and other activities really helped me.",
     name: "Ilham Budi Trisetyo",
-    role: "UI/UX Designer",
+    role: "Backend Developer",
     avatar: "testimonials-avatar/ilham.jpg",
   },
   {
     quote: "The community has been fantastic in providing a supportive and engaging learning environment. I am making great progress and I am confident that I will continue to improve.",
     name: "Alvin Adetya",
     role: "Full Stack Developer",
-    avatar: "testimonials-avatar/alvin.jpg ",
+    avatar: "testimonials-avatar/alvin.png",
   },
     {
     quote: "The community has been fantastic in providing a supportive and engaging learning environment. I am making great progress and I am confident that I will continue to improve.",
     name: "Fahmi Nabil Maulana",
     role: "Full Stack Developer",
-    avatar: "testimonials-avatar/fahmi.jpg",
+    avatar: "testimonials-avatar/fahmi.png",
   },
 ];
 
@@ -75,17 +75,25 @@ const Testimonials = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-card rounded-2xl p-6 shadow-card border border-border/50"
+              whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
+              className="bg-card rounded-2xl p-6 shadow-card border border-border/50 cursor-pointer"
             >
-              <Quote className="w-8 h-8 text-primary/30 mb-4" />
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <Quote className="w-8 h-8 text-primary/30 mb-4" />
+              </motion.div>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 "{testimonial.quote}"
               </p>
               <div className="flex items-center gap-3">
-                <img
+                <motion.img
                   src={testimonial.avatar}
                   alt={testimonial.name}
                   className="w-12 h-12 rounded-full object-cover"
+                  whileHover={{ scale: 1.15 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 />
                 <div>
                   <p className="font-semibold text-foreground">{testimonial.name}</p>
