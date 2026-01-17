@@ -50,35 +50,64 @@ const Activities = () => {
 
         {/* Activity Cards */}
         <div className="grid md:grid-cols-3 gap-8">
-          {activities.map((activity, index) => (
-            <motion.div
-              key={activity.title}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-xl transition-shadow duration-300"
-            >
-              {/* Image */}
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={activity.image}
-                  alt={activity.title}
-                  className="w-full h-full object-cover"
-                />
-                {/* Tag */}
-                <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold ${activity.color}`}>
-                  {activity.tag}
-                </div>
-              </div>
+          {activities.map((activity, index) => {
+            const IconComponent = activity.icon;
+            return (
+              <motion.div
+                key={activity.title}
+                initial={{ opacity: 0, y: 50 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                whileHover={{ y: -12, transition: { duration: 0.3 } }}
+                className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-2xl cursor-pointer"
+              >
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden bg-muted">
+                  <motion.img
+                    src={activity.image}
+                    alt={activity.title}
+                    className="w-full h-full object-cover"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                  />
+                  {/* Tag */}
+                  <motion.div
+                    className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold ${activity.color}`}
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    {activity.tag}
+                  </motion.div>
 
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-foreground leading-snug">
-                  {activity.title}
-                </h3>
-              </div>
-            </motion.div>
-          ))}
+                  {/* Icon Overlay */}
+                  <motion.div
+                    className="absolute inset-0 flex items-center justify-center bg-black/0"
+                    whileHover={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      whileHover={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <IconComponent className="w-16 h-16 text-white drop-shadow-lg" />
+                    </motion.div>
+                  </motion.div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <motion.h3
+                    className="text-lg font-semibold text-foreground leading-snug"
+                    whileHover={{ color: "var(--primary)" }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {activity.title}
+                  </motion.h3>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
