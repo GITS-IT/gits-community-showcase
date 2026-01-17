@@ -4,40 +4,28 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "The resources and support provided by the community have been invaluable in helping me make progress on my coding journey.",
-    name: "Ahmad Pratama",
-    role: "Web Developer",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+    quote: "Bersama GITS, saya merasa lebih percaya diri dalam menghadapi tantangan di bidang keamanan jaringan.",
+    name: "Helga Alan Abhipraya",
+    role: "Network Security Engineer",
+    avatar: "/public/testimonials-avatar/alan.jpg",
   },
   {
     quote: "I've been learning coding with this community for the past few months and I'm amazed at how much I have improved. The daily sessions and other activities really helped me.",
-    name: "Dewi Sartika",
+    name: "Ilham Budi Trisetyo",
     role: "UI/UX Designer",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+    avatar: "/public/testimonials-avatar/ilham.jpg",
   },
   {
     quote: "The community has been fantastic in providing a supportive and engaging learning environment. I am making great progress and I am confident that I will continue to improve.",
-    name: "Budi Santoso",
-    role: "Full Stack Dev",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+    name: "Alvin Adetya",
+    role: "Full Stack Developer",
+    avatar: "/public/testimonials-avatar/alvin.jpg ",
   },
-  {
-    quote: "I had a great time during the sessions because both the participants and the moderator made it enjoyable. I also made new virtual friends to talk with.",
-    name: "Sari Indah",
-    role: "Data Analyst",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    quote: "As someone who is a shy and introverted person, I really appreciate about joining an online community for learning. I have been pleasantly surprised by how comfortable I am.",
-    name: "Rina Wati",
-    role: "Backend Dev",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    quote: "The sessions are interactive and fun, and the community is very supportive and welcoming. I'm very grateful that I found this community has been helpful.",
-    name: "Joko Widodo",
-    role: "DevOps Engineer",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+    {
+    quote: "The community has been fantastic in providing a supportive and engaging learning environment. I am making great progress and I am confident that I will continue to improve.",
+    name: "Fahmi Nabil Maulana",
+    role: "Full Stack Developer",
+    avatar: "/public/testimonials-avatar/fahmi.jpg",
   },
 ];
 
