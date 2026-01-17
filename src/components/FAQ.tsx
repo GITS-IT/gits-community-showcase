@@ -1,5 +1,5 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import { useRef, useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -33,6 +33,7 @@ const faqs = [
 const FAQ = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [openItem, setOpenItem] = useState<string | null>(null);
 
   return (
     <section ref={ref} id="faq" className="section-padding bg-muted/30">
@@ -59,20 +60,51 @@ const FAQ = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-3xl mx-auto"
         >
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion 
+            type="single" 
+            collapsible 
+            className="space-y-4"
+            onValueChange={setOpenItem}
+          >
             {faqs.map((faq, index) => (
-              <AccordionItem
+              <motion.div
                 key={index}
-                value={`item-${index}`}
-                className="bg-card rounded-xl border border-border px-6 data-[state=open]:shadow-card"
+                layout
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
+                viewport={{ once: true }}
               >
-                <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-5">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
+                <AccordionItem
+                  value={`item-${index}`}
+                  className="bg-card rounded-xl border border-border px-6 overflow-hidden data-[state=open]:shadow-lg data-[state=open]:shadow-primary/10 transition-all duration-300"
+                >
+                  <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5 group">
+                    <span>{faq.question}</span>
+                  </AccordionTrigger>
+                  <AnimatePresence>
+                    {openItem === `item-${index}` && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                      >
+                        <AccordionContent className="text-muted-foreground pb-5">
+                          <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ duration: 0.2, delay: 0.1 }}
+                          >
+                            {faq.answer}
+                          </motion.div>
+                        </AccordionContent>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </AccordionItem>
+              </motion.div>
             ))}
           </Accordion>
         </motion.div>
