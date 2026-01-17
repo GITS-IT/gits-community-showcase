@@ -93,7 +93,7 @@ const Footer = () => {
             className="col-span-2"
           >
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <div className="w-20 h-20 rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-bold">
                   <img src="logo.png" alt="gits" />
                 </span>
