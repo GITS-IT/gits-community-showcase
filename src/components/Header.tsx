@@ -2,17 +2,43 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Resources", href: "#resources" },
-  { name: "Community", href: "#community" },
-  { name: "FAQ", href: "#faq" },
+  { name: "About", href: "about" },
+  { name: "Resources", href: "resources" },
+  { name: "Community", href: "community" },
+  { name: "FAQ", href: "faq" },
   { name: "Blog", href: "/blog" }
 ];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (href) => {
+    if (href.startsWith("/")) {
+      // Navigation ke page lain
+      navigate(href);
+    } else {
+      // Anchor navigation
+      if (location.pathname !== "/") {
+        // Jika tidak di home, navigate ke home dulu
+        navigate("/");
+        // Tunggu page load, then scroll
+        setTimeout(() => {
+          const element = document.getElementById(href);
+          element?.scrollIntoView({ behavior: "smooth" });
+        }, 500);
+      } else {
+        // Sudah di home, langsung scroll
+        const element = document.getElementById(href);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <motion.header
@@ -36,13 +62,13 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.name}
-                href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
+                onClick={() => handleNavClick(link.href)}
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium cursor-pointer bg-transparent border-none"
               >
                 {link.name}
-              </a>
+              </button>
             ))}
           </nav>
 
@@ -74,14 +100,13 @@ const Header = () => {
           >
             <nav className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => handleNavClick(link.href)}
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2 text-left bg-transparent border-none cursor-pointer"
                 >
                   {link.name}
-                </a>
+                </button>
               ))}
               <Button variant="hero" className="mt-2">
                 Register now
