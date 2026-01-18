@@ -68,7 +68,7 @@ const Footer = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 md:grid-cols-3 gap-8 flex-1"
+            className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-6 w-fit"
           >
             {Object.values(footerLinks).map((section, index) => (
               <motion.div
