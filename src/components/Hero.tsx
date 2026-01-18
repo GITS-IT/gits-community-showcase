@@ -59,7 +59,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <a href="https://forms.gle/6bL8AmJW2Mj7LBdz5" target="_blank" rel="noopener noreferrer">
               <Button variant="hero" size="lg">
-                  Register now
+                  Join With Us
               </Button>
                 </a>
               <Button variant="heroOutline" size="lg">

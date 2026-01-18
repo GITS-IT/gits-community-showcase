@@ -46,10 +46,10 @@ const CTA = () => {
               className="text-center lg:text-left"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-success-foreground mb-4">
-                Unlock the full potential of our community by registering
+                Let's create a bright future together!
               </h2>
               <p className="text-success-foreground/80 mb-8 max-w-lg">
-                Don't miss out on exclusive content, events, and opportunities for personal growth.
+                Don't miss out on exclusive content, events, and opportunities for self-improvement. Join our community today and take the first step towards a better you!
               </p>
               <a href="https://forms.gle/6bL8AmJW2Mj7LBdz5" target="_blank" rel="noopener noreferrer">
               <Button
@@ -57,7 +57,7 @@ const CTA = () => {
                 size="lg"
                 className="bg-white text-success hover:bg-white/90 font-semibold px-8"
               >
-                  Register now
+                  Join With Us
               </Button>
                 </a>
             </motion.div>
