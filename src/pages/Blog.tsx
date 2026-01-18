@@ -28,7 +28,6 @@ const Blog = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
       },
     },
   };
@@ -151,8 +150,7 @@ const Blog = () => {
                             animate={isInView ? { scale: 1, opacity: 1 } : {}}
                             whileHover={{ scale: 1.1 }}
                             transition={{ 
-                              duration: 0.6,
-                              hover: { duration: 0.4 }
+                              duration: 0.6
                             }}
                           />
                           <motion.div 

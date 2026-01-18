@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 interface LinkItem {
   text: string;
@@ -16,11 +17,20 @@ interface FooterSection {
 const footerLinks: Record<string, FooterSection> = {
   company: {
     title: "COMMUNITY",
-    links: ["About us", "Services", "Team", "Contact"],
+    links: [
+      { text: "About us", url: "#about" },
+      { text: "Services", url: "#" },
+      { text: "Team", url: "#team" },
+      { text: "Careers", url: "#" },
+    ],
   },
   resources: {
     title: "RESOURCES",
-    links: ["Events", "Blog", "Newsletter"],
+    links: [
+      { text: "Events", url: "#" },
+      { text: "Blog", url: "/blog" },
+      { text: "Newsletter", url: "#" },
+    ],
   },
   connect: {
     title: "CONNECT WITH US!",
@@ -30,31 +40,53 @@ const footerLinks: Record<string, FooterSection> = {
       { text: "WhatsApp Group", url: "https://chat.whatsapp.com/Cs15furLUihKO69S3ShJSA" },
     ],
   },
-  // policies: {
-  //   title: "POLICIES",
-  //   links: ["Terms", "Privacy", "Guidelines", "Licenses"],
-  // },
 };
 
 const Footer = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const renderLink = (link: FooterLink) => {
     const isExternal = typeof link !== "string";
     const text = isExternal ? link.text : link;
     const url = isExternal ? link.url : "#";
 
+    const handleLinkClick = (e: React.MouseEvent) => {
+      e.preventDefault();
+      
+      if (url.startsWith("http")) {
+        // External link
+        window.open(url, "_blank");
+      } else if (url.startsWith("/")) {
+        // Internal page navigation
+        navigate(url);
+      } else if (url.startsWith("#")) {
+        // Anchor navigation
+        if (location.pathname !== "/") {
+          // Jika tidak di home, navigate ke home dulu
+          navigate("/");
+          setTimeout(() => {
+            const element = document.getElementById(url.slice(1));
+            element?.scrollIntoView({ behavior: "smooth" });
+          }, 500);
+        } else {
+          // Sudah di home, langsung scroll
+          const element = document.getElementById(url.slice(1));
+          element?.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    };
+
     return (
       <li key={text}>
-        <a
-          href={url}
-          target={isExternal ? "_blank" : undefined}
-          rel={isExternal ? "noopener noreferrer" : undefined}
-          className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+        <button
+          onClick={handleLinkClick}
+          className="text-muted-foreground hover:text-foreground transition-colors text-sm text-left bg-transparent border-none cursor-pointer"
         >
           {text}
-        </a>
+        </button>
       </li>
     );
   };
