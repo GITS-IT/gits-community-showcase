@@ -76,7 +76,7 @@ const Header = () => {
           <div className="hidden md:block">
               <a href="https://forms.gle/6bL8AmJW2Mj7LBdz5" target="_blank" rel="noopener noreferrer">
             <Button variant="hero" size="lg">
-                Register now
+                Join With Us
             </Button>
               </a>
           </div>

@@ -7,7 +7,8 @@
     "date": "18 Januari 2026",
     "category": "Security",
     "author": "Helga Alan Abhipraya",
-    "image": "https://www.crowdstrike.com/content/dam/crowdstrike/www/en-us/wp/2024/07/Falcon-on-white.png"
+    "image": "https://www.crowdstrike.com/content/dam/crowdstrike/www/en-us/wp/2024/07/Falcon-on-white.png",
+    "tags": ["Security", "CrowdStrike", "Cybersecurity"]
   },
   {
     "id": "2",
@@ -17,6 +18,7 @@
     "date": "18 Januari 2026",
     "category": "Security",
     "author": "Helga Alan Abhipraya",
-    "image": "https://www.bleepstatic.com/content/hl-images/2022/10/14/Fortinet.jpg"
+    "image": "https://www.bleepstatic.com/content/hl-images/2022/10/14/Fortinet.jpg",
+    "tags": ["Vulnerability", "Fortinet", "SSL-VPN"]
   }
 ]
