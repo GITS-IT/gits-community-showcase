@@ -11,13 +11,6 @@ const activities = [
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Gamepad2,
-    tag: "IT Games",
-    title: "A fun game to review the material we've learned",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=250&fit=crop",
-    color: "bg-success/10 text-success",
-  },
-  {
     icon: Users,
     tag: "Study Group",
     title: "Discuss and practice the material together",
@@ -49,8 +42,9 @@ const Activities = () => {
         </motion.div>
 
         {/* Activity Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {activities.map((activity, index) => {
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+            {activities.map((activity, index) => {
             const IconComponent = activity.icon;
             return (
               <motion.div
@@ -108,6 +102,7 @@ const Activities = () => {
               </motion.div>
             );
           })}
+          </div>
         </div>
       </div>
     </section>
