@@ -153,16 +153,20 @@ export const PostDetail = () => {
                                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
                             </div>
 
-                            {/* Tags Statis */}
+                            {/* Tags Dinamis */}
                             <div className="mt-12 pt-8 border-t border-slate-100 flex flex-wrap gap-2">
-                                {["React", "WebDev", "Tailwind"].map((tag) => (
-                                    <span
-                                        key={tag}
-                                        className="text-sm bg-slate-100 text-slate-600 px-3 py-1 rounded hover:bg-blue-600 hover:text-white cursor-pointer transition-colors"
-                                    >
-                                        #{tag}
-                                    </span>
-                                ))}
+                                {post.tags && post.tags.length > 0 ? (
+                                    post.tags.map((tag) => (
+                                        <span
+                                            key={tag}
+                                            className="text-sm bg-slate-100 text-slate-600 px-3 py-1 rounded hover:bg-blue-600 hover:text-white cursor-pointer transition-colors"
+                                        >
+                                            #{tag}
+                                        </span>
+                                    ))
+                                ) : (
+                                    <span className="text-sm text-slate-400">Tidak ada tags</span>
+                                )}
                             </div>
                         </article>
 
