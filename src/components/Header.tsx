@@ -8,6 +8,7 @@ const navLinks = [
   { name: "Resources", href: "#resources" },
   { name: "Community", href: "#community" },
   { name: "FAQ", href: "#faq" },
+  { name: "Blog", href: "/blog" }
 ];
 
 const Header = () => {
@@ -26,7 +27,7 @@ const Header = () => {
           <a href="#" className="flex items-center gap-2">
             <div className="w-8 h-8 md:w-20 md:h-20 rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm md:text-base">
-                <img src="logo.png" alt="gits" />
+                <img src="/logo.png" alt="gits" />
               </span>
             </div>
             <span className="font-bold text-lg md:text-xl text-foreground"></span>
