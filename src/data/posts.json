@@ -20,5 +20,15 @@
     "author": "Helga Alan Abhipraya",
     "image": "https://www.bleepstatic.com/content/hl-images/2022/10/14/Fortinet.jpg",
     "tags": ["Vulnerability", "Fortinet", "SSL-VPN"]
+  },
+  {
+    "id": "3",
+    "title": "Cloudflare Patches Critical Zero-Day Vulnerability in ACME Validation Logic",
+    "excerpt": "Cloudflare baru saja menambal celah keamanan kritis pada logika validasi ACME yang memungkinkan penyerang melewati kontrol keamanan WAF dan mengakses server asal secara langsung.",
+    "content": "<h3>Detail Kerentanan ACME Cloudflare</h3><p>Cloudflare telah memperbaiki kerentanan serius dalam sistem otomatisasi sertifikat mereka, khususnya pada logika validasi ACME (Automatic Certificate Management Environment). Celah ini berakar pada bagaimana jaringan edge Cloudflare memproses permintaan yang ditujukan untuk jalur tantangan <i>ACME HTTP-01</i> (<code>/.well-known/acme-challenge/*</code>).</p><p>Kerentanan ini memungkinkan penyerang jarak jauh yang tidak terautentikasi untuk melewati perlindungan Web Application Firewall (WAF) dan fitur keamanan lainnya. Dalam skenario tertentu, penyerang dapat memanipulasi permintaan untuk mendapatkan akses langsung ke server asal (origin server) pelanggan, yang seharusnya terlindungi di balik infrastruktur Cloudflare.</p><blockquote>\"Celah ini ditemukan melalui program Bug Bounty dan telah dimitigasi sepenuhnya. Hingga saat ini, tidak ada bukti bahwa kerentanan ini telah dieksploitasi oleh aktor jahat di dunia nyata.\"</blockquote><p>Investigasi menunjukkan bahwa masalah ini terjadi karena adanya kesalahan konfigurasi pada sistem pemrosesan permintaan di tingkat edge yang memberikan pengecualian keamanan terlalu luas pada jalur validasi sertifikat. Cloudflare telah menerapkan pembaruan sistem secara global untuk memastikan semua permintaan melalui pemeriksaan keamanan yang ketat tanpa mengganggu proses pembaruan sertifikat otomatis.</p>",
+    "date": "23 Januari 2026",
+    "category": "Security",
+    "author": "Helga Alan Abhipraya",
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiklvHynWev7KGK969jOFlu6a0M_M7n9fU6J_NjTLKdkbdTKb2k1eLELGV20pGgHPnezhBmDFCJz4VaHHCmxmVIpOIewXbfwW8oNBI5u_ovDNNiLVmgKAjTv8PvcX4syPC7NzZQLsk3xBtcXDNXEdEC75WzPm00s9Yc_LuUhpYQipVlew2ISI5HM-bGQue6/s16000/Cloudflare%20Zero-Day%20Vulnerability.webp"
   }
 ]
