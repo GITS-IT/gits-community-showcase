@@ -30,5 +30,15 @@
     "category": "Security",
     "author": "Helga Alan Abhipraya",
     "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiklvHynWev7KGK969jOFlu6a0M_M7n9fU6J_NjTLKdkbdTKb2k1eLELGV20pGgHPnezhBmDFCJz4VaHHCmxmVIpOIewXbfwW8oNBI5u_ovDNNiLVmgKAjTv8PvcX4syPC7NzZQLsk3xBtcXDNXEdEC75WzPm00s9Yc_LuUhpYQipVlew2ISI5HM-bGQue6/s16000/Cloudflare%20Zero-Day%20Vulnerability.webp"
+  },
+  {
+    "id": "4",
+    "title": "Microsoft to Add Brand Impersonation Protection Warning to Teams Calls",
+    "excerpt": "Microsoft memperkenalkan fitur keamanan baru untuk Teams Calling yang akan memberikan peringatan kepada pengguna jika mendeteksi adanya upaya penipuan atau penyamaran organisasi (brand impersonation) pada panggilan eksternal.",
+    "content": "<h3>Perlindungan Baru Terhadap Vishing di Microsoft Teams</h3><p>Microsoft mengumumkan peluncuran fitur <i>Brand Impersonation Protection</i> untuk layanan Teams Calling. Fitur ini dirancang khusus untuk mendeteksi dan memperingatkan pengguna terhadap panggilan eksternal mencurigakan yang mencoba meniru identitas organisasi atau perusahaan terpercaya.</p><p>Sistem ini bekerja secara proaktif mengevaluasi panggilan masuk berbasis VoIP (Voice over IP) dari kontak eksternal pertama. Jika algoritme mendeteksi tanda-tanda penipuan atau manipulasi, pengguna akan melihat pesan peringatan pada layar sebelum menjawab panggilan. Tujuannya adalah untuk mengurangi risiko serangan <i>social engineering</i> dan <i>voice phishing</i> (vishing) yang kian marak.</p><blockquote>\"Keamanan identitas penelepon adalah prioritas kami untuk memastikan kolaborasi bisnis yang aman dan terhindar dari manipulasi aktor jahat.\"</blockquote><p>Fitur ini akan diaktifkan secara otomatis (default) bagi organisasi yang menggunakan Microsoft Teams Calling. Deployment dijadwalkan mulai pada pertengahan Februari 2026 untuk pengguna <i>Targeted Release</i>, sementara ketersediaan secara umum (General Availability) akan menyusul setelahnya. Tidak ada tindakan administratif khusus yang diperlukan oleh tim IT, namun perusahaan disarankan untuk memperbarui materi pelatihan bagi karyawan agar mereka tahu cara merespons peringatan tersebut.</p>",
+    "date": "24 Januari 2026",
+    "category": "Security",
+    "author": "Helga Alan Abhipraya",
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEji4gzYYZAvAyFMHKZbI4d1LZFkczDLqAXhwdZKp0wxd8YQyrQBrkeVzlEK2qKvSVvFw5ubSDmpraj_dCNm5e9lUDAZNlpSFHqcHKGHlQD26sTtlRiM4Cma3YdPwneAl49sSPBijp5gU8txzuBe2VKSbxXSw2oKSzKj1BRliXUO5LMAN-kkOPCjJQBc654/s1600/Microsoft%20to%20add%20Brand%20impersonation%20protection%20Warning%20to%20Teams%20Calls%20(1)%20(1)%20(1).webp"
   }
 ]
