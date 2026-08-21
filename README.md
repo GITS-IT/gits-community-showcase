@@ -32,8 +32,8 @@ This project is brought to life by the dedicated developers of GITS:
 <table align="center">
   <tr>
     <td align="center">
-      <a href="https://github.com/helgaalan182">
-        <img src="https://github.com/helgaalan182.png" width="100px;" alt="Helga Alan"/><br />
+      <a href="https://github.com/azana-nisaa">
+        <img src="https://github.com/azana-nisaa.png" width="100px;" alt="Helga Alan"/><br />
         <sub><b>Helga Alan Abhipraya</b></sub>
       </a>
     </td>
