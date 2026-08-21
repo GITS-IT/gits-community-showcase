@@ -33,8 +33,8 @@ This project is brought to life by the dedicated developers of GITS:
   <tr>
     <td align="center">
       <a href="https://github.com/azana-nisaa">
-        <img src="https://github.com/azana-nisaa.png" width="100px;" alt="Helga Alan"/><br />
-        <sub><b>Helga Alan Abhipraya</b></sub>
+        <img src="https://github.com/azana-nisaa.png" width="100px;" alt="Azana Nisaa"/><br />
+        <sub><b>Alan Kebelet Ngising</b></sub>
       </a>
     </td>
     <td align="center">
